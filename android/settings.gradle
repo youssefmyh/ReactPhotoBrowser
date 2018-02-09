@@ -1,0 +1,3 @@
+rootProject.name = 'ReactPhotoBrowser'
+
+include ':app'
