@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from 'react';
+import PhotoRepository from './Repository/PhotoRepository'; 
 import {
   Platform,
   StyleSheet,
@@ -21,6 +22,23 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+
+   constructor(props){
+      super(props);
+
+       PhotoRepository.getInstance()
+      .getPhotosList().then(function(photos){
+
+               console.log(photos);
+
+
+      },function(reject)
+      {
+        console.log(reject);
+      });
+
+
+    }
   render() {
     return (
       <View style={styles.container}>
