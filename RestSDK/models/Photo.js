@@ -4,7 +4,7 @@
 //	Create by Youssef on 9/2/2018
 //	Copyright © 2018. All rights reserved.
 
-export default class  Photo{
+export default class Photo {
 
 
     GetAlbumId(){
@@ -13,14 +13,14 @@ export default class  Photo{
     GetId (){
         return this._id;
     }
-    GetTitle (){
-        return this._title;
+    GetCaption (){
+        return this.caption;
     }
-    GetUrl() {
-        return this._url;
+    Getphoto() {
+        return this.photo;
     }
-    GetThumbnailUrl() {
-        return this._thumbnailUrl;
+    GetThumb() {
+        return this.thumb;
     }
 
 
@@ -35,9 +35,10 @@ export default class  Photo{
 
         this._albumId = data.albumId;
         this._id =   data.id;
-        this._title = data.title;
-        this._url = data.url;
-        this._thumbnailUrl = data.thumbnailUrl;
+        this.caption = data.title;
+        this.photo = data.url;
+        this.thumb = data.url;
+        this.selected = false;
     }
 
 
